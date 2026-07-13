@@ -1,0 +1,110 @@
+<!DOCTYPE html> <!-- Tells browser thst it is an html document and about its html version i.e. html5, for browser to follow the latest industry standards -->
+<html lang="en"> <!-- Root Element of An HTML Document -->
+<head> <!-- Head Element contains metadata about the page -->
+    <meta charset="UTF-8"> <!-- Sets the characterset of the web page to utf-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Tells the browser about how to control page's size and scaling in moile devices -->
+    <!-- width=device-width sets the width of viewport equal to the width of device -->
+    <!-- initial-scale=1.0 sets the initial zoom of the page at 100% -->
+    <title>HTML Cheat Sheet</title> <!-- Gives title to html document -->
+</head>
+<body> <!-- Body Tag Contains all The Content which is rendered and displayed on screen by browser -->
+    <!-- headings -->
+    <h1>Heading 1</h1>
+    <h2>Heading 2</h2>
+    <h3>Heading 3</h3>
+    <h4>Heading 4</h4>
+    <h5>Heading 5</h5>
+    <h6>Heading 6</h6>
+    <!-- paragraph -->
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+    <!-- block and inline elements -->
+     <!-- block elements take the full available width on the page and start with a new line (div)-->
+        <p>Lorem, ipsum dolor.</p>
+        <p>Lorem, ipsum dolor.</p>
+     <!-- iniline elemets only take up necessary width and do not start with a new line (span)-->
+        <a href="">hola</a>
+        <a href="">amigo</a>
+        <strong>Bold</strong>
+        <em>Italics</em>
+        <u>Underline</u>
+        <s>Strikethrough</s>
+    <!-- Anchor Elemets --><br>
+        <a href="https://www.google.com" target="_blank">Google</a><br>
+    <!-- Lists -->
+        <ul>
+            <li>Small</li>
+            <li>Little</li>
+            <li>Tiny</li>
+        </ul>
+        <ol>
+            <li>First</li>
+            <li>Second</li>
+            <li>Third</li>
+        </ol>
+    <!-- Forms -->
+        <form action="" method="post">
+            <label for="birthday">Birthday</label>
+            <input type="date" id="birthday" name="birthday"> <!-- for attribute value of label element should be equal to the id of input to associate an input with a label -->
+            <fieldset id="signup">
+                <legend><h3>Sign Up</h3></legend>
+                <label for="name">Name: </label>
+                <input type="text" name="name" id="name" placeholder="enter your name"><br>
+
+                <label for="password">Password: </label>
+                <input type="password" name="password" id="password" placeholder="enter your password"><br>
+
+                <label for="cat-dog">Do you prefer cats or dogs?</label>
+                <input type="radio" name="cat-dog" id="cat" value="cat"> <label for="cat">Cat</label> <!-- Radio input submits data in the form of name&value pair -->
+                <input type="radio" name="cat-dog" id="dog" value="dog"> <label for="dog">Dog</label> <br>
+
+                <label for="tea-coffee">Do you prefer tea or coffee?</label>
+                <input type="checkbox" name="tea-coffee" id="tea" value="tea"> <label for="tea">Tea</label> <!-- Checkbox input submits data in the form of name&value pair -->
+                <input type="checkbox" name="tea-coffee" id="coffee" value="coffee"> <label for="coffee">Coffee</label> <br> <!-- You Can Select Multiple Checkboxes at Once -->
+
+                <label for="monuments">Your Favourite Monuments</label>
+                <select name="monuments" id="monuments">
+                    <optgroup label="Inside Delhi">
+                        <option value="qutub-minar" selected>Qutub Minar</option>
+                        <option value="qila-rp">Quila Rai Pithora</option>
+                    </optgroup>
+                    <optgroup label="Outside Delhi">
+                        <option value="victory-tower">Victory Tower</option>
+                        <option value="gateway">Gateway of India</option>
+                    </optgroup>
+                </select><br>
+
+                <label for="browsers">Your Favourite Browser</label>
+                <input list="browser" name="browsers" id="browsers" required>
+                <datalist id="browser">
+                    <option value="Chrome">
+                    <option value="Firefox">
+                    <option value="Edge">
+                    <option value="Brave">
+                </datalist>
+                <br>
+
+                <button>Submit</button>
+            </fieldset>
+            <textarea name="" id=""></textarea>
+        </form>
+    <!-- Images -->
+        <img src="https://www.pixelstalk.net/wp-content/uploads/2016/06/HD-images-of-nature-download.jpg" width="300" alt="Text Tells about image and Appears when Image Fails to Load. Primariliy used for accessibilty">
+        <!-- img element is used to add images on a web page. it is a self closing element -->
+    <!-- divs and spans -->
+     <!-- divs: they are just block level elements which are used to divide content on the page -->
+        <div>bwfwbe</div>
+        <div>bwfwbe</div>
+        <div>bwfwbe</div>
+     <!-- spans: they are just inline elements which can be used to target a specific content -->
+        <span>iugywibefh</span>
+        <span>iugywibefh</span>
+        <span>iugywibefh</span>
+    <!-- id element -->
+        <pre>id element id used to uniquely identify an element in a web page</pre>
+    <!-- horizontal rule -->
+    <hr>
+    <!-- horizontal rule is used to separate sections of content on a web page -->
+    <!-- it is a self closing element -->
+    <p>Visit My <a href="https://www.github.com/the-grandmaster0/html_tutorial">GitHub Repository</a> for Proper Definitions</p>
+</body>
+</html>
