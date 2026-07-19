@@ -3,12 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Aditya Jha">
+    <!-- meta description provides a summary of the page for search engines -->
+    <meta name="description" author="This is a cheatsheet page">
+    <!-- rel="shortcut icon" sets the favicon shown in the browser tab -->
+    <link rel="shortcut icon" href="https://www.pixelstalk.net/wp-content/uploads/2016/06/HD-images-of-nature-download.jpg" type="image/jpg">
     <title>Semantic HTML</title>
 </head>
 <body>
+
+    <!-- <header>: Represents introductory content or a group of navigational aids.
+         Typically contains the site logo, heading, and primary navigation. -->
     <header>
         <h1>Lorem, ipsum.</h1>
-        <nav>
+
+        <!-- <nav>: Defines a set of navigation links.
+             aria-label helps screen readers distinguish between multiple nav elements on the page. -->
+        <nav aria-label="Primary Navigation">
             <ul>
                 <li><a href="#">Navigation Link</a></li>
                 <li><a href="#">Navigation Link</a></li>
@@ -16,26 +27,67 @@
             </ul>
         </nav>
     </header>
+
+    <!-- <main>: Represents the dominant content of the <body>.
+         There should only be ONE <main> element per page. -->
     <main>
-        <section>
-            <h2>Lorem, ipsum dolor.</h2>
+
+        <!-- <section>: Groups related content under a thematic heading.
+             aria-labelledby links the section to a heading element by its ID for accessibility. -->
+        <section aria-labelledby="Primary Section">
+            <h2 id="Primary Section">Lorem, ipsum dolor.</h2>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem modi, cupiditate asperiores expedita fuga obcaecati soluta, debitis recusandae laboriosam tempore delectus, deserunt exercitationem omnis.</p>
         </section>
+
+        <!-- <article>: Represents self-contained content that could be independently distributed
+             (e.g., a blog post, news article, or forum entry). -->
         <article>
             <h2>Lorem ipsum dolor sit.
             </h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
+            <!-- <time>: Represents a specific time or duration.
+                 datetime attribute provides a machine-readable format (ISO 8601).
+                 PT3H = Period of Time: 3 Hours -->
+            <p>Lorem ipsum dolor sit amet, <time datetime="PT3H">3 Hours</time> consectetur adipisicing.</p>
         </article>
+
+        <!-- Another <section> grouping image-related content -->
         <section>
             <h2>Image</h2>
+
+            <!-- <figure>: Groups media content (image, diagram, code) with its caption.
+                 Should be used when the content is referenced from the main flow but could be moved. -->
             <figure>
                 <img src="https://www.pixelstalk.net/wp-content/uploads/2016/06/HD-images-of-nature-download.jpg" alt="photo">
+                <!-- <figcaption>: Provides a caption or legend for the <figure> element. -->
                 <figcaption>An Image</figcaption>
             </figure>
         </section>
+
+        <!-- <aside>: Represents content tangentially related to the surrounding content.
+             Commonly used for sidebars, pull quotes, or supplementary info. -->
+        <aside>
+            <!-- <abbr>: Marks an abbreviation or acronym.
+                 title attribute provides the full expansion shown on hover. -->
+            <h2><abbr title="Side Bar">SB</abbr></h2>
+
+            <!-- <details>: Creates a disclosure widget the user can open/close.
+                 <summary>: Provides the visible heading/label for the <details> widget. -->
+            <details>
+                <summary>Lorem, ipsum dolor.</summary>
+                <!-- <mark>: Highlights text for reference or notation purposes. -->
+                <!-- <time datetime="07:00">: Represents a specific time of day (7:00 AM). -->
+                <p>Lorem <mark>ipsum dolor sit</mark>, amet <time datetime="07:00">7 am</time> consectetur adipisicing.</p>
+            </details>
+        </aside>
+
     </main>
+
+    <!-- <footer>: Represents the footer for its nearest sectioning ancestor.
+         Typically contains copyright info, author details, or related links. -->
     <footer>
+        <!-- &copy; renders the © copyright symbol -->
         <p>&copy; Aditya Jha</p>
     </footer>
+
 </body>
 </html>

@@ -14,6 +14,7 @@ This repository contains my notes and examples for learning HTML.
 - [Divs and Spans](#divs-and-spans)
 - [ID Attribute](#id-attribute)
 - [Horizontal Rule](#horizontal-rule)
+- [Semantic HTML](#semantic-html)
 
 ---
 
@@ -197,3 +198,111 @@ This repository contains my notes and examples for learning HTML.
 ```
 - Self-closing element
 - Separates sections of content
+
+---
+
+## Semantic HTML
+
+Semantic HTML uses elements that carry meaningful descriptions of their content, making pages more accessible and SEO-friendly. Non-semantic elements like `<div>` and `<span>` say nothing about their content — semantic elements do.
+
+### Key Semantic Elements
+
+#### `<header>`
+- Represents introductory content or navigational aids for a page or section
+- Typically holds the site logo, main heading, and `<nav>`
+
+#### `<nav>`
+- Defines a block of navigation links
+- Use `aria-label` when there are multiple `<nav>` elements on the page to distinguish them for screen readers
+```html
+<nav aria-label="Primary Navigation">
+    <ul>
+        <li><a href="#">Link</a></li>
+    </ul>
+</nav>
+```
+
+#### `<main>`
+- Represents the primary, dominant content of the page
+- There should only be **one** `<main>` per page
+
+#### `<section>`
+- Groups thematically related content, usually with a heading
+- Use `aria-labelledby` pointing to a heading's `id` for better accessibility
+```html
+<section aria-labelledby="section-heading">
+    <h2 id="section-heading">Section Title</h2>
+    <p>Content...</p>
+</section>
+```
+
+#### `<article>`
+- Represents self-contained, independently distributable content
+- Examples: blog posts, news articles, forum entries
+
+#### `<aside>`
+- Contains content tangentially related to the surrounding content
+- Commonly used for sidebars, pull quotes, or supplementary info
+
+#### `<footer>`
+- Represents the footer for its nearest sectioning ancestor
+- Typically holds copyright info, author details, or related links
+
+---
+
+### Other Useful Semantic Elements
+
+#### `<figure>` and `<figcaption>`
+- `<figure>`: Wraps self-contained media (images, diagrams, code snippets)
+- `<figcaption>`: Provides a caption for the `<figure>`
+```html
+<figure>
+    <img src="image.jpg" alt="Description">
+    <figcaption>Caption text</figcaption>
+</figure>
+```
+
+#### `<time>`
+- Represents a specific point in time or a duration
+- `datetime` attribute provides a machine-readable format (ISO 8601)
+```html
+<time datetime="PT3H">3 Hours</time>   <!-- duration: 3 hours -->
+<time datetime="07:00">7 am</time>      <!-- time of day -->
+```
+
+#### `<abbr>`
+- Marks an abbreviation or acronym
+- `title` attribute provides the full expansion on hover
+```html
+<abbr title="Side Bar">SB</abbr>
+```
+
+#### `<details>` and `<summary>`
+- `<details>`: A disclosure widget the user can open/close
+- `<summary>`: The visible label/heading for the `<details>` widget
+```html
+<details>
+    <summary>Click to expand</summary>
+    <p>Hidden content shown when expanded.</p>
+</details>
+```
+
+#### `<mark>`
+- Highlights text for reference or notation purposes
+```html
+<p>Lorem <mark>ipsum dolor sit</mark> amet.</p>
+```
+
+#### `&copy;`
+- HTML entity that renders the © copyright symbol
+```html
+<p>&copy; Aditya Jha</p>
+```
+
+---
+
+### Why Use Semantic HTML?
+- **Accessibility**: Screen readers use semantic elements to help users navigate content
+- **SEO**: Search engines better understand page structure and content relevance
+- **Readability**: Code is easier to read and maintain
+- **Standards**: Follows modern HTML5 best practices
